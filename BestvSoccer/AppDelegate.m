@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "RootViewController.h"
+#import "MatchViewController.h"
+#import "NewsViewController.h"
+#import "VideoViewController.h"
+#import "RankViewController.h"
+#import "ScoreViewController.h"
+
 
 @implementation AppDelegate
 
@@ -14,7 +22,37 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    NSMutableArray *viewControllerArr = [[NSMutableArray alloc] init];
+    
+    MatchViewController *matchViewController = [[MatchViewController alloc] init];
+    [matchViewController setTitle:@"比赛"];
+    [viewControllerArr addObject:matchViewController];
+    
+    NewsViewController *newsViewController = [[NewsViewController alloc] init];
+    [newsViewController setTitle:@"资讯"];
+    [viewControllerArr addObject:newsViewController];
+    
+    VideoViewController *videoViewController = [[VideoViewController alloc] init];
+    [videoViewController setTitle:@"视频"];
+    [viewControllerArr addObject:videoViewController];
+    
+    RankViewController *rankViewController = [[RankViewController alloc] init];
+    [rankViewController setTitle:@"排行"];
+    [viewControllerArr addObject:rankViewController];
+    
+    ScoreViewController *scoreViewController = [[ScoreViewController alloc] init];
+    [scoreViewController setTitle:@"积分"];
+    [viewControllerArr addObject:scoreViewController];
+    
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+    [mainViewController setViewControllers:viewControllerArr animated:YES];
+    
+    RootViewController *rootVC = [[RootViewController alloc] initWithRootViewController:mainViewController];
+    [self.window setRootViewController:rootVC];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181A4B19195024FA006441C6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A4B18195024FA006441C6 /* MBProgressHUD.m */; };
 		186374DD194E7B20009489A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186374DC194E7B20009489A4 /* Foundation.framework */; };
 		186374DF194E7B20009489A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186374DE194E7B20009489A4 /* CoreGraphics.framework */; };
 		186374E1194E7B20009489A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186374E0194E7B20009489A4 /* UIKit.framework */; };
